@@ -28,5 +28,6 @@ class Solution{
 			}
 		}
 		System.out.println(dp[n]);
+		
 	}
 }
