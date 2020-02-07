@@ -4,7 +4,7 @@
  * Hyeonseong 
  */
 import java.util.*;	
-public class BOJ1300 {
+public class BOJ2343 {
 	public static void main(String[] args) {
 		Solution s = new Solution();
 	}
@@ -12,8 +12,8 @@ public class BOJ1300 {
 class Solution{
 	int n; // 레슨의 수
 	int m; // 블루레이의 수 
-	int les[];
-	int answer;
+	int les[]; // 강의
+	int answer; // 정답 
 	public Solution() {
 		Scanner scan = new Scanner(System.in);
 		n = scan.nextInt();
@@ -45,9 +45,9 @@ class Solution{
 		int cnt = 0;
 		int sum = 0;
 		for(int i=0;i<n;i++) {
-			if(sum+les[i]>size) {
-				cnt++;
-				sum = les[i];
+			if(sum+les[i]>size) { // 레슨크기의합이 사이즈보다 커지면
+				cnt++; // 블루레이의 개수를 1개늘리고
+				sum = les[i]; // 새로운 그룹을 만든다
 			} else {
 				sum+=les[i];
 			}
